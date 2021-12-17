@@ -11,14 +11,14 @@ interface profileInterface {
   divisa?: string;
   prefered_cryptocurrency?: string;
 }
-const schema = new Schema({
+const profileSchema = new Schema<profileInterface>({
   name: String,
   nickname: String,
-  email: {type: String, required: true},
-  password: {type: String, required: true},
+  email: { type: String, required: true },
+  password: { type: String, required: true },
   capital: Number,
   divisa: String,
   prefered_cryptocurrency: String,
 });
 
-export const Profile = mongoose.model("Profile", schema);
+export const Profile = mongoose.model<profileInterface>("Profile", profileSchema);
