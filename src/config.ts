@@ -13,5 +13,5 @@ const checkEnv = (envVar: string, defaultValue?: string) => {
   }
 };
 export const PORT: number = parseInt(checkEnv("PORT"), 10);
-export const DBURL: string = checkEnv("DBURL");
+export const DBURL: string = checkEnv("DBURL", "mongodb://localhost:27017/userFavorites");
 export const CORS_ORIGINS = ["http://localhost:3000"];
