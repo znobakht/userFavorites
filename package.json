@@ -15,6 +15,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.3.0",
+    "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.21",
     "luxon": "^1.26.0",
     "mongoose": "^5.12.7",
@@ -30,6 +31,7 @@
     "build": "tsc -b"
   },
   "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.6",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "eslint": "^7.25.0",

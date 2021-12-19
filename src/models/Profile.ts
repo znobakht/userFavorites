@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
-
+import jwt from "jsonwebtoken";
+import { sectretKey } from "../config";
 const { Schema } = mongoose;
 
 interface profileInterface {
@@ -20,5 +21,9 @@ const profileSchema = new Schema<profileInterface>({
   divisa: String,
   prefered_cryptocurrency: String,
 });
+
+profileSchema.methods.generateAuthToken = function() {
+  const token = jwt.sign({_id: this._id, email: this.email}, sectretKey)
+}
 
 export const Profile = mongoose.model<profileInterface>("Profile", profileSchema);
