@@ -6,6 +6,7 @@
     adding interface to be sure about format of inputs.
     using profileInterface in profileSchema and model definition.
     adding a function for generating jwt token.
+        this token will expire after 5 days.
 
 # config.ts file
     a default value added for dataBase url.

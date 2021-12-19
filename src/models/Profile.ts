@@ -17,7 +17,7 @@ interface profileInterface {
 const profileSchema = new Schema<profileInterface>({
   name: String,
   nickname: String,
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   capital: Number,
   divisa: String,
@@ -28,7 +28,10 @@ const profileSchema = new Schema<profileInterface>({
 profileSchema.methods.generateAuthToken = function () {
   const token = jwt.sign(
     { _id: this._id, email: this.email, role: this.role },
-    sectretKey
+    sectretKey,
+    {
+      expiresIn: '5d'
+    },
   );
 };
 
