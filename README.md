@@ -10,3 +10,6 @@
 # config.ts file
     a default value added for dataBase url.
     secretKey is a key for generating jwt.
+
+# RoleNames
+    some routes only admin can access them. For example, only admin can see all profiles.
