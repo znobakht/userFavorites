@@ -13,3 +13,9 @@
 
 # RoleNames
     some routes only admin can access them. For example, only admin can see all profiles.
+
+# profile router
+    register: when user requests POST to /api/profile.
+        at first, checking if the user existed or not.
+        if not, hashing its password and creating new database object.
+        in response, sending user's informations and _id. (password wont be sent)
