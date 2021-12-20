@@ -28,7 +28,7 @@
 
 # api.ts 
     auth router added.
-    
+
 # auth.router.ts
     register: when user requests POST to /api/auth.
         at first, checking if the user existed or not.
@@ -36,3 +36,15 @@
         in response, sending user's informations and _id. (password wont be sent)
     login: when user requests GET to /api/auth
         if the user exists, creates a token for him/her and sends it back.
+
+# auth.spec
+    using supertest to request to the server.
+    loading profileModel to check if the user added to dataBase or not.
+    beforeAll tests, connecting to the server.
+    afterAll tests, 
+        disconnecting from server.
+        removing profile model to delete unwanted objects.
+        disconnceting from dataBase.
+    at first describe:
+        at first test, checking register with a request that has no parameters.
+        second: checking registeration.
