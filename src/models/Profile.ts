@@ -13,6 +13,7 @@ interface profileInterface {
   divisa?: string;
   prefered_cryptocurrency?: string;
   role?: string;
+  generateAuthToken(): any;
 }
 const profileSchema = new Schema<profileInterface>({
   name: String,
