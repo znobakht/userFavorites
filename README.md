@@ -48,3 +48,8 @@
     at first describe:
         at first test, checking register with a request that has no parameters.
         second: checking registeration.
+
+# seed.ts
+    the user who added to dataBase is an admin.
+    a hashed password added to use in login and getting token process.
+    instead of hardCode id, using output of create method.
