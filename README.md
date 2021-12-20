@@ -2,6 +2,7 @@
 # gitIgnore
     node_moduls and package-lock are unnecessary.
     coverage folder that is output of test isn't requiered to push to git.
+    dist folder is the output of build and isn't required to push.
 # profile Model
     email and password are required to secure login and etc.
     adding interface to be sure about format of inputs.
@@ -23,5 +24,7 @@
         in response, sending user's informations and _id. (password wont be sent)
 
 # package.json 
+    
+    for 'start' script, needs to look at dist/src folder. before start script, must run build script.
     for 'test', uses jest and running tests one by one.
     some scripts are necessary for jest to run correctly.
