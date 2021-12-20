@@ -18,13 +18,18 @@
     some routes only admin can access them. For example, only admin can see all profiles.
 
 # profile router
-    register: when user requests POST to /api/profile.
-        at first, checking if the user existed or not.
-        if not, hashing its password and creating new database object.
-        in response, sending user's informations and _id. (password wont be sent)
+    
 
 # package.json 
     
     for 'start' script, needs to look at dist/src folder. before start script, must run build script.
     for 'test', uses jest and running tests one by one.
     some scripts are necessary for jest to run correctly.
+
+# auth.router.ts
+    register: when user requests POST to /api/auth.
+        at first, checking if the user existed or not.
+        if not, hashing its password and creating new database object.
+        in response, sending user's informations and _id. (password wont be sent)
+    login: when user requests GET to /api/auth
+        if the user exists, creates a token for him/her and sends it back.
