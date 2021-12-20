@@ -6,6 +6,7 @@ import mongoose from "mongoose";
 import { router as favoriteRouter } from "./routes/favorite.router";
 import { router as profileRouter } from "./routes/profile.router";
 import { router as simulatorRouter } from "./routes/simulator.router";
+import { router as authRouter } from "./routes/auth.router";
 
 mongoose
   .connect(`${DBURL}`, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.use(favoriteRouter);
 app.use(profileRouter);
 app.use(simulatorRouter);
+app.use(authRouter);
 
 const server = app.listen(PORT, () =>
   console.log(`✅  Ready on port http://localhost:${PORT}`)

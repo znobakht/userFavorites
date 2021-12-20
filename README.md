@@ -26,6 +26,9 @@
     for 'test', uses jest and running tests one by one.
     some scripts are necessary for jest to run correctly.
 
+# api.ts 
+    auth router added.
+    
 # auth.router.ts
     register: when user requests POST to /api/auth.
         at first, checking if the user existed or not.
