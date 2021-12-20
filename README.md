@@ -1,6 +1,7 @@
 # readme
 # gitIgnore
     node_moduls and package-lock are unnecessary.
+    coverage folder that is output of test isn't requiered to push to git.
 # profile Model
     email and password are required to secure login and etc.
     adding interface to be sure about format of inputs.
@@ -20,3 +21,7 @@
         at first, checking if the user existed or not.
         if not, hashing its password and creating new database object.
         in response, sending user's informations and _id. (password wont be sent)
+
+# package.json 
+    for 'test', uses jest and running tests one by one.
+    some scripts are necessary for jest to run correctly.
